@@ -200,6 +200,9 @@ router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     layout: 'person',
+    page: {
+      title: 'Person',
+    },
     main: {
       person: {
         name: 'Emma Johnson',
