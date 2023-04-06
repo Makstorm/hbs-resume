@@ -1,0 +1,184 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  {{#with main}}
+    <main>
+      <p class='h1'>{{name}}</p>
+      <p class="lead">
+        {{description}}
+      </p>
+
+      {{#with history}}
+      <dl class="row">
+        <dt class="col-sm-3">Year</dt>
+        <dd class="col-sm-9">{{year}}</dd>
+
+        <dt class="col-sm-3">Founder</dt>
+        <dd class="col-sm-9">{{founder}}</dd>
+      </dl>
+      {{/with}}
+
+      <br />
+      <hr />
+      <br />
+      <p class='h4'>Syntax</p>
+      
+      {{#with syntax}}
+      <dl class="row">
+        <dt class="col-sm-3">variables</dt>
+        <dd class="col-sm-9">
+          {{#each variables}}
+            <p>{{this}}</p>
+          {{/each}}
+        </dd>
+
+        <dt class="col-sm-3">functions</dt>
+        <dd class="col-sm-9">
+          {{#each functions}}
+            <p>{{this}}</p>
+          {{/each}}
+        </dd>
+
+        <dt class="col-sm-3">conditionals</dt>
+        <dd class="col-sm-9">
+          {{#each conditionals}}
+            <p>{{this}}</p>
+          {{/each}}
+        </dd>
+
+        <dt class="col-sm-3">loops</dt>
+        <dd class="col-sm-9">
+          {{#each loops}}
+            <p>{{this}}</p>
+          {{/each}}
+        </dd>
+
+        <dt class="col-sm-3">classes</dt>
+        <dd class="col-sm-9">
+          {{#each classes}}
+            <p>{{this}}</p>
+          {{/each}}
+        </dd>
+      </dl>
+      {{/with}}
+
+      <br />
+      <hr />
+      <br />
+
+      <p class='h4'>Info</p>
+      <div class='btn-group dropend'>
+        <button
+          type='button'
+          class='btn btn-secondary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Types
+        </button>
+        <ul class='dropdown-menu'>
+          {{#each types}}
+            <li><a
+                class='dropdown-item'
+                href='#'
+              >{{this}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class='btn-group dropend'>
+        <button
+          type='button'
+          class='btn btn-secondary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Features
+        </button>
+        <ul class='dropdown-menu'>
+          {{#each features}}
+            <li><a
+                class='dropdown-item'
+                href='#'
+              >{{this}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+      <!-- Split dropend button -->
+      <div class='btn-group dropend'>
+        <button
+          type='button'
+          class='btn btn-secondary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Libraries
+        </button>
+        
+          <span class='visually-hidden'>Toggle Dropend</span>
+        </button>
+        <ul class='dropdown-menu'>
+          {{#each libraries}}
+            <li><a
+                class='dropdown-item'
+                href='#'
+              >{{this}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class='btn-group dropend'>
+        <button
+          type='button'
+          class='btn btn-secondary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Tools
+        </button>
+        <ul class='dropdown-menu'>
+          {{#each tools}}
+            <li><a
+                class='dropdown-item'
+                href='#'
+              >{{this}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <br />
+      <br />
+      <hr />
+      <br />
+
+      <p class='h4'>Community</p>
+      <table class='table'>
+        <thead>
+          <tr>
+            <th scope='col'></th>
+            <th scope='col'>name</th>
+            <th scope='col'>type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each community}}
+            <tr>
+              <th scope='row'>-</th>
+              <td>{{name}}</td>
+              <td>{{type}}</td>
+            </tr>
+          {{/each}}
+
+        </tbody>
+      </table>
+    </main>
+  {{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
