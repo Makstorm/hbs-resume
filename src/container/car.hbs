@@ -1,0 +1,424 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  {{#with main}}
+    <main>
+      <p class='h1'>Car</p>
+      <dl class='row'>
+        <dt class='col-sm-3'>make</dt>
+        <dd class='col-sm-9'>{{make}}</dd>
+
+        <dt class='col-sm-3'>model</dt>
+        <dd class='col-sm-9'>{{model}}</dd>
+
+        <dt class='col-sm-3'>year</dt>
+        <dd class='col-sm-9'>{{year}}</dd>
+
+        <dt class='col-sm-3'>color</dt>
+        <dd class='col-sm-9'>{{color}}</dd>
+      </dl>
+
+      <br />
+      <hr />
+      <br />
+
+      <p class='h4'>Features</p>
+
+      {{#with features}}
+        <dl class='row'>
+          <dt class='col-sm-3'>interior</dt>
+          <dd class='col-sm-9'>
+            {{#with interior}}
+              <dl class='row'>
+                {{#with seats}}
+                  <dt class='col-sm-4'>seats</dt>
+                  <dd class='col-sm-8'>
+                    <dl class='row'>
+
+                      <dt class='col-sm-5'>material</dt>
+                      <dd class='col-sm-7'>
+                        {{material}}
+                      </dd>
+
+                      <dt class='col-sm-5'>color</dt>
+                      <dd class='col-sm-7'>
+                        {{color}}
+                      </dd>
+
+                      <dt class='col-sm-5'>heated</dt>
+                      <dd class='col-sm-7'>
+                        {{heated}}
+                      </dd>
+
+                      <dt class='col-sm-5'>ventilated</dt>
+                      <dd class='col-sm-7'>
+                        {{ventilated}}
+                      </dd>
+
+                    </dl>
+                  </dd>
+                {{/with}}
+              </dl>
+
+              <dl class='row'>
+                {{#with dashboard}}
+                  <dt class='col-sm-4'>dashboard</dt>
+                  <dd class='col-sm-8'>
+                    <dl class='row'>
+
+                      <dt class='col-sm-5'>material</dt>
+                      <dd class='col-sm-7'>
+                        {{material}}
+                      </dd>
+
+                      <dt class='col-sm-5'>color</dt>
+                      <dd class='col-sm-7'>
+                        {{color}}
+                      </dd>
+
+                      {{#with display}}
+                        <dt class='col-sm-5'>display</dt>
+                        <dd class='col-sm-7'>
+                          <dl class='row'>
+                            <dt class='col-sm-4'>type</dt>
+                            <dd
+                              class='col-sm-8'
+                            >{{type}}</dd>
+
+                            <dt class='col-sm-4'>size</dt>
+                            <dd
+                              class='col-sm-8'
+                            >{{size}}</dd>
+
+                            <dt
+                              class='col-sm-4'
+                            >resolution</dt>
+                            <dd
+                              class='col-sm-9'
+                            >{{resolution}}</dd>
+
+                            <dt
+                              class='col-sm-4'
+                            >touchscreen</dt>
+                            <dd
+                              class='col-sm-9'
+                            >{{touchscreen}}</dd>
+                          </dl>
+                        </dd>
+                      {{/with}}
+
+                      <dt class='col-sm-5'>ventilated</dt>
+                      <dd class='col-sm-7'>
+                        {{ventilated}}
+                      </dd>
+
+                    </dl>
+                  </dd>
+                {{/with}}
+              </dl>
+
+              <dl class='row'>
+                {{#with audio}}
+                  <dt class='col-sm-4'>audio</dt>
+                  <dd class='col-sm-8'>
+                    <dl class='row'>
+
+                      <dt class='col-sm-5'>system</dt>
+                      <dd class='col-sm-7'>
+                        {{system}}
+                      </dd>
+
+                      <dt class='col-sm-5'>speakers</dt>
+                      <dd class='col-sm-7'>
+                        {{speakers}}
+                      </dd>
+
+                      <dt class='col-sm-5'>subwoofer</dt>
+                      <dd class='col-sm-7'>
+                        {{subwoofer}}
+                      </dd>
+
+                      <dt class='col-sm-5'>bluetooth</dt>
+                      <dd class='col-sm-7'>
+                        {{bluetooth}}
+                      </dd>
+
+                      <dt class='col-sm-5'>USB</dt>
+                      <dd class='col-sm-7'>
+                        {{USB}}
+                      </dd>
+
+                    </dl>
+                  </dd>
+                {{/with}}
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>exterior</dt>
+          <dd class='col-sm-9'>
+            {{#with exterior}}
+              <dl class='row'>
+                {{#with wheels}}
+                  <dt class='col-sm-4'>wheels</dt>
+                  <dd class='col-sm-8'>
+                    <dl class='row'>
+
+                      <dt class='col-sm-5'>size</dt>
+                      <dd class='col-sm-7'>
+                        {{size}}
+                      </dd>
+
+                      <dt class='col-sm-5'>type</dt>
+                      <dd class='col-sm-7'>
+                        {{type}}
+                      </dd>
+
+                      <dt class='col-sm-5'>color</dt>
+                      <dd class='col-sm-7'>
+                        {{color}}
+                      </dd>
+
+                    </dl>
+                  </dd>
+                {{/with}}
+              </dl>
+
+              <dl class='row'>
+                {{#with headlights}}
+                  <dt class='col-sm-4'>headlights</dt>
+                  <dd class='col-sm-8'>
+                    <dl class='row'>
+
+                      <dt class='col-sm-5'>type</dt>
+                      <dd class='col-sm-7'>
+                        {{type}}
+                      </dd>
+
+                      <dt class='col-sm-5'>brightness</dt>
+                      <dd class='col-sm-7'>
+                        {{brightness}}
+                      </dd>
+
+                      <dt class='col-sm-5'>automatic</dt>
+                      <dd class='col-sm-7'>
+                        {{automatic}}
+                      </dd>
+
+                    </dl>
+                  </dd>
+                {{/with}}
+              </dl>
+
+              <dl class='row'>
+                {{#with sunroof}}
+                  <dt class='col-sm-4'>sunroof</dt>
+                  <dd class='col-sm-8'>
+                    <dl class='row'>
+
+                      <dt class='col-sm-5'>type</dt>
+                      <dd class='col-sm-7'>
+                        {{type}}
+                      </dd>
+
+                      <dt class='col-sm-5'>size</dt>
+                      <dd class='col-sm-7'>
+                        {{size}}
+                      </dd>
+
+                      <dt class='col-sm-5'>automatic</dt>
+                      <dd class='col-sm-7'>
+                        {{automatic}}
+                      </dd>
+
+                    </dl>
+                  </dd>
+                {{/with}}
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>safety</dt>
+          <dd class='col-sm-9'>
+            {{#with safety}}
+              <dl class='row'>
+                {{#with airbags}}
+                  <dt class='col-sm-4'>airbags</dt>
+                  <dd class='col-sm-8'>
+                    <dl class='row'>
+
+                      <dt class='col-sm-5'>front</dt>
+                      <dd class='col-sm-7'>
+                        {{front}}
+                      </dd>
+
+                      <dt class='col-sm-5'>side</dt>
+                      <dd class='col-sm-7'>
+                        {{side}}
+                      </dd>
+
+                      <dt class='col-sm-5'>knee</dt>
+                      <dd class='col-sm-7'>
+                        {{knee}}
+                      </dd>
+
+                      <dt class='col-sm-5'>rear</dt>
+                      <dd class='col-sm-7'>
+                        {{rear}}
+                      </dd>
+
+                    </dl>
+                  </dd>
+                {{/with}}
+              </dl>
+
+              <dl class='row'>
+                {{#with assistance}}
+                  <dt class='col-sm-4'>assistance</dt>
+                  <dd class='col-sm-8'>
+                    <dl class='row'>
+
+                      <dt
+                        class='col-sm-5'
+                      >blind_spot_monitoring</dt>
+                      <dd class='col-sm-10'>
+                        {{blind_spot_monitoring}}
+                      </dd>
+
+                      <dt
+                        class='col-sm-5'
+                      >rear_cross_traffic_alert</dt>
+                      <dd class='col-sm-10'>
+                        {{rear_cross_traffic_alert}}
+                      </dd>
+
+                      <dt
+                        class='col-sm-5'
+                      >lane_departure_warning</dt>
+                      <dd class='col-sm-10'>
+                        {{lane_departure_warning}}
+                      </dd>
+
+                      <dt
+                        class='col-sm-5'
+                      >adaptive_cruise_control</dt>
+                      <dd class='col-sm-10'>
+                        {{adaptive_cruise_control}}
+                      </dd>
+
+                      <dt
+                        class='col-sm-5'
+                      >collision_warning</dt>
+                      <dd class='col-sm-10'>
+                        {{collision_warning}}
+                      </dd>
+
+                    </dl>
+                  </dd>
+                {{/with}}
+              </dl>
+            {{/with}}
+          </dd>
+        </dl>
+      {{/with}}
+
+      <br />
+      <hr />
+      <br />
+
+      <p class='h4'>Engine</p>
+      <br />
+      {{#with engine}}
+        <dl class='row'>
+          <dt class='col-sm-3'>type</dt>
+          <dd class='col-sm-9'>{{type}}</dd>
+
+          <dt class='col-sm-3'>displacement</dt>
+          <dd class='col-sm-9'>{{displacement}}</dd>
+
+          <dt class='col-sm-3'>horsepower</dt>
+          <dd class='col-sm-9'>{{horsepower}}</dd>
+
+          <dt class='col-sm-3'>torque</dt>
+          <dd class='col-sm-9'>{{torque}}</dd>
+
+          <dt class='col-sm-3'>transmission</dt>
+          {{#with transmission}}
+            <dd class='col-sm-9'>
+              <dl class='row'>
+                <dt class='col-sm-3'>type</dt>
+                <dd class='col-sm-9'>{{type}}</dd>
+
+                <dt class='col-sm-3'>gears</dt>
+                <dd class='col-sm-9'>{{gears}}</dd>
+              </dl>
+            </dd>
+          {{/with}}
+        </dl>
+      {{/with}}
+
+      <br />
+      <hr />
+      <br />
+
+      <p class='h4'>fuel_economy</p>
+      <br />
+      {{#with fuel_economy}}
+        <dl class='row'>
+          <dt class='col-sm-3'>city</dt>
+          <dd class='col-sm-9'>{{city}}</dd>
+
+          <dt class='col-sm-3'>highway</dt>
+          <dd class='col-sm-9'>{{highway}}</dd>
+
+          <dt class='col-sm-3'>combined</dt>
+          <dd class='col-sm-9'>{{combined}}</dd>
+
+        </dl>
+      {{/with}}
+
+      <br />
+      <hr />
+      <br />
+
+      <p class='h4'>Price</p>
+      <br />
+      {{#with price}}
+        <dl class='row'>
+          <dt class='col-sm-3'>base</dt>
+          <dd class='col-sm-9'>{{base}}</dd>
+
+          <dt class='col-sm-3'>destination</dt>
+          <dd class='col-sm-9'>{{destination}}</dd>
+
+          <dt class='col-sm-3'>options</dt>
+          {{#with options}}
+            <dd class='col-sm-9'>
+              <dl class='row'>
+                <dt class='col-sm-3'>navigation</dt>
+                <dd class='col-sm-9'>{{navigation}}</dd>
+
+                <dt class='col-sm-3'>moonroof</dt>
+                <dd class='col-sm-9'>{{moonroof}}</dd>
+
+                <dt class='col-sm-3'>premium_paint</dt>
+                <dd class='col-sm-9'>{{premium_paint}}</dd>
+              </dl>
+            </dd>
+          {{/with}}
+
+          <dt class='col-sm-3'>total</dt>
+          <dd class='col-sm-9'>{{total}}</dd>
+        </dl>
+      {{/with}}
+    </main>
+  {{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
