@@ -1,0 +1,281 @@
+{{! 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+  {{#with main}}
+    <main>
+      <p class='h1'>Mac</p>
+      <dl class='row'>
+        <dt class='col-sm-3'>name</dt>
+        <dd class='col-sm-9'>{{name}}</dd>
+
+        <dt class='col-sm-3'>description</dt>
+        <dd class='col-sm-9'>{{description}}</dd>
+
+        <dt class='col-sm-3'>price</dt>
+        <dd class='col-sm-9'>{{price}}</dd>
+
+        <dt class='col-sm-3'>category</dt>
+        <dd class='col-sm-9'>{{category}}</dd>
+      </dl>
+
+      <br />
+      <hr />
+      <br />
+
+      <p class='h4'>Features</p>
+
+      {{#with features}}
+        <dl class='row'>
+          <dt class='col-sm-3'>processor</dt>
+          <dd class='col-sm-9'>
+            {{#with processor}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>brand</dt>
+                <dd class='col-sm-8'>
+                  {{brand}}
+                </dd>
+
+                <dt class='col-sm-4'>model</dt>
+                <dd class='col-sm-8'>
+                  {{model}}
+                </dd>
+
+                <dt class='col-sm-4'>speed</dt>
+                <dd class='col-sm-8'>
+                  {{speed}}
+                </dd>
+
+                <dt class='col-sm-4'>cores</dt>
+                <dd class='col-sm-8'>
+                  {{cores}}
+                </dd>
+
+                <dt class='col-sm-4'>cache</dt>
+                <dd class='col-sm-8'>
+                  {{cache}}
+                </dd>
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>memory</dt>
+          <dd class='col-sm-9'>
+            {{#with memory}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>type</dt>
+                <dd class='col-sm-8'>
+                  {{type}}
+                </dd>
+
+                <dt class='col-sm-4'>size</dt>
+                <dd class='col-sm-8'>
+                  {{size}}
+                </dd>
+
+                <dt class='col-sm-4'>speed</dt>
+                <dd class='col-sm-8'>
+                  {{speed}}
+                </dd>
+
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>storage</dt>
+          <dd class='col-sm-9'>
+            {{#with storage}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>type</dt>
+                <dd class='col-sm-8'>
+                  {{type}}
+                </dd>
+
+                <dt class='col-sm-4'>size</dt>
+                <dd class='col-sm-8'>
+                  {{size}}
+                </dd>
+
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>display</dt>
+          <dd class='col-sm-9'>
+            {{#with display}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>size</dt>
+                <dd class='col-sm-8'>
+                  {{size}}
+                </dd>
+
+                <dt class='col-sm-4'>resolution</dt>
+                <dd class='col-sm-8'>
+                  {{resolution}}
+                </dd>
+
+                <dt class='col-sm-4'>technology</dt>
+                <dd class='col-sm-8'>
+                  {{technology}}
+                </dd>
+
+                <dt class='col-sm-4'>color_space</dt>
+                <dd class='col-sm-8'>
+                  {{color_space}}
+                </dd>
+
+                <dt class='col-sm-4'>brightness</dt>
+                <dd class='col-sm-8'>
+                  {{brightness}}
+                </dd>
+
+                <dt class='col-sm-4'>refresh_rate</dt>
+                <dd class='col-sm-8'>
+                  {{refresh_rate}}
+                </dd>
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>graphics</dt>
+          <dd class='col-sm-9'>
+            {{#with graphics}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>brand</dt>
+                <dd class='col-sm-8'>
+                  {{brand}}
+                </dd>
+
+                <dt class='col-sm-4'>model</dt>
+                <dd class='col-sm-8'>
+                  {{model}}
+                </dd>
+
+                <dt class='col-sm-4'>memory</dt>
+                <dd class='col-sm-8'>
+                  {{memory}}
+                </dd>
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>ports</dt>
+          <dd class='col-sm-9'>
+            {{#each ports}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>type</dt>
+                <dd class='col-sm-8'>
+                  {{type}}
+                </dd>
+
+                <dt class='col-sm-4'>count</dt>
+                <dd class='col-sm-8'>
+                  {{count}}
+                </dd>
+                {{#if features}}
+                  <dt class='col-sm-4'>features</dt>
+
+                  <dd class='col-sm-8'>
+                    {{#each features}}
+                      <p>{{this}}</p>
+                    {{/each}}
+                  </dd>
+
+                {{/if}}
+              </dl>
+            {{/each}}
+          </dd>
+
+          <dt class='col-sm-3'>battery</dt>
+          <dd class='col-sm-9'>
+            {{#with battery}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>type</dt>
+                <dd class='col-sm-8'>
+                  {{type}}
+                </dd>
+
+                <dt class='col-sm-4'>capacity</dt>
+                <dd class='col-sm-8'>
+                  {{capacity}}
+                </dd>
+
+                <dt class='col-sm-4'>life</dt>
+                <dd class='col-sm-8'>
+                  {{life}}
+                </dd>
+
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>weight</dt>
+          <dd class='col-sm-9'>{{weight}}</dd>
+
+          <dt class='col-sm-3'>dimensions</dt>
+          <dd class='col-sm-9'>
+            {{#with dimensions}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>height</dt>
+                <dd class='col-sm-8'>
+                  {{height}}
+                </dd>
+
+                <dt class='col-sm-4'>width</dt>
+                <dd class='col-sm-8'>
+                  {{width}}
+                </dd>
+
+                <dt class='col-sm-4'>depth</dt>
+                <dd class='col-sm-8'>
+                  {{depth}}
+                </dd>
+
+              </dl>
+            {{/with}}
+          </dd>
+
+          <dt class='col-sm-3'>operating_system</dt>
+          <dd class='col-sm-9'>{{operating_system}}</dd>
+
+          <dt class='col-sm-3'>accessories</dt>
+          <dd class='col-sm-9'>
+            {{#each accessories}}
+              <dl class='row'>
+
+                <dt class='col-sm-4'>name</dt>
+                <dd class='col-sm-8'>
+                  {{name}}
+                </dd>
+
+                <dt class='col-sm-4'>price</dt>
+                <dd class='col-sm-8'>
+                  {{price}}
+                </dd>
+
+              </dl>
+            {{/each}}
+          </dd>
+
+        </dl>
+
+      {{/with}}
+
+    </main>
+  {{/with}}
+</div>
+
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
