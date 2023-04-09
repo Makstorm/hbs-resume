@@ -1,0 +1,27 @@
+{{#with data}}
+  <div class='card'>
+    <div class='card-body'>
+      <p class='card-title text-uppercase'>{{title}}</p>
+      <p class='card-text'>{{text}}</p>
+      <button class='btn btn-link text'><a
+          href='{{button.url}}'
+          target='_blank'
+        >{{button.text}}</a></button>
+    </div>
+    <div class='card'>
+      <div class='card-body'>
+        <ul>
+          {{#each list_name}}
+            <li>
+              <a
+                href='{{url}}'
+                class='text-link'
+              >{{text}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+{{/with}}
