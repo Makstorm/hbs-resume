@@ -1,0 +1,55 @@
+{{#with data}}
+
+  <div class='card'>
+    <div class='card-body'>
+      {{#if ../primary}}
+        <h1 class='card-title'>{{title}}</h1>
+        <p class='card-text'>{{text}}</p>
+        <div>
+          <button
+            class='btn btn-primary'
+          >{{button_text.solid}}</button>
+        </div>
+        <br />
+        <div>
+          <button
+            class='btn btn-outline-primary'
+          >{{button_text.outline}}</button>
+        </div>
+      {{/if}}
+
+      {{#if ../secondary}}
+        <h2 class='card-title'>{{title}}</h1>
+        <p class='card-text'>{{text}}</p>
+        <div>
+          <button
+            class='btn btn-secondary'
+          >{{button_text.solid}}</button>
+        </div>
+        <br />
+        <div>
+          <button
+            class='btn btn-outline-secondary'
+          >{{button_text.outline}}</button>
+        </div>
+      {{/if}}
+
+      {{#if ../dark}}
+        <h3 class='card-title'>{{title}}</h1>
+        <p class='card-text'>{{text}}</p>
+        <div>
+          <button
+            class='btn btn-dark'
+          >{{button_text.solid}}</button>
+        </div>
+        <br />
+        <div>
+          <button
+            class='btn btn-outline-dark'
+          >{{button_text.outline}}</button>
+        </div>
+      {{/if}}
+
+    </div>
+  </div>
+{{/with}}

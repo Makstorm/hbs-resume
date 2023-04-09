@@ -1,0 +1,23 @@
+<div>
+  {{#with main}}
+    <main>
+      {{#with heading}}
+        <div class="card">
+          <div class="card-body">
+            {{> headingComp primary=true data=main}}
+            {{> headingComp secondary=true  data=second}}
+            {{> headingComp dark=true data=subblock}}
+          </div>
+
+          <br>
+
+          
+        </div>
+      {{/with}}
+
+      {{> nestedComp data=nested_display}}
+
+      {{>paragraphComp data=paragraph}}
+    </main>
+  {{/with}}
+</div>
