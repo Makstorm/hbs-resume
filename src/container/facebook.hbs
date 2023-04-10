@@ -36,6 +36,34 @@
                         >{{name}}</a>
                       {{/each}}
                     </div>
+
+                    {{#if groups}}
+                      <div class='card-body'>
+                        <ul class='list-group list-group-flush'>
+                        <h4 class='card-title'>Groups</h4>
+                        {{#each groups}}
+                          <li class='list-group-item'>
+                            <div class='card'>
+                              <div class='card-body'>
+                                <h5 class='card-title'>{{name}}</h5>
+                                <p class='card-text'>{{description}}</p>
+                              </div>
+
+                              <div class='card-body'>
+                                <h6 class='card-title'>Members</h5>
+                                {{#each members}}
+                                  <a
+                                    href='#'
+                                    class='card-link'
+                                  >{{name}}</a>
+                                {{/each}}
+                              </div>
+                            </div>
+                          </li>
+                        {{/each}}
+                      </ul>
+                      </div>
+                    {{/if}}
                   </div>
                 </li>
               {{/each}}
@@ -68,10 +96,7 @@
             {{/if}}
             
             
-            <div class='card-body'>
-              <a href='#' class='card-link'>Card link</a>
-              <a href='#' class='card-link'>Another link</a>
-            </div>
+            
           </div>
         </div>
       {{/each}}
