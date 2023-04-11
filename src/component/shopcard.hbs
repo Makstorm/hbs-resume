@@ -1,0 +1,17 @@
+{{#with data}}
+  <div class='col-4'>
+    <div class='card'>
+      <img src='{{image}}' alt='' class='card-img-top' />
+      <div class='card-body'>
+        <div class='card-title'>{{title}}
+          {{#if isHot}}<span
+              class='badge bg-warning'
+            >HOT!</span>{{/if}}
+          {{#if isNew}}<span
+              class='badge text-bg-primary'
+            >Нове</span>{{/if}}</div>
+        <p class='card-text'>{{description}}</p>
+      </div>
+    </div>
+  </div>
+{{/with}}

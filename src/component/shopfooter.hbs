@@ -1,0 +1,15 @@
+<section class='col-12 row mx-auto'>
+  {{#each data}}
+    <ul class='nav flex-column col-2'>
+      {{#each this}}
+        <li class='nav-item'>
+          <a
+            class='nav-link'
+            aria-current='page'
+            href='{{link}}'
+          >{{text}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{/each}}
+</section>
