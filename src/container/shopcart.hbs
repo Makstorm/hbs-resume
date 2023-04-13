@@ -1,0 +1,116 @@
+<div>
+  {{#with main}}
+    <main class='row p-0 mx-auto'>
+      <section>
+        {{#with header}}
+          <h1 class='mt-5'>{{title}}</h1>
+
+          <a
+            href='{{button.link}}'
+            class='btn btn-outline-dark mt-3'
+          >
+            {{button.text}}
+          </a>
+        {{/with}}
+      </section>
+
+      <div>
+        <hr class='my-5' />
+      </div>
+
+      <section>
+
+        <div class='row p-0 mx-auto'>
+          {{#each goodsBlock}}
+            {{> cartGoodsItem data=this}}
+          {{/each}}
+        </div>
+
+      </section>
+
+      <div>
+        <hr class='my-5' />
+      </div>
+
+      <section>
+
+        <div class="row p-0 mx-auto">
+          {{#with total}}
+            <h2>{{title}}</h2>
+            <h1>{{amount}}</h1>
+            <p>{{delivery}}</p>
+
+            <div>
+              {{#each buttons}}
+                <div class="{{#if @last}}{{else}}mb-3{{/if}}">
+                  <a href="{{link}}" class="btn {{#if isSuccess}}btn-success{{/if}} {{#if isOutline}}btn-outline-success{{/if}}">{{text}}</a>
+                </div>
+              {{/each}}
+            </div>
+          {{/with}}
+        </div>
+
+      </section>
+
+      <div>
+        <hr class='my-5' />
+      </div>
+
+      <section>
+        <div class="row pe-0 mx-auto">
+          {{#with goodsOtherBlock}}
+            <div class="col-12 text-center">
+              <h3>{{title}}</h3>
+            </div>
+            
+            {{#each cards}}
+              {{> shopcard data=this}}
+            {{/each}}
+
+            
+          {{/with}}
+        </div>
+      </section>
+
+      <div>
+        <hr class='my-5' />
+      </div>
+
+      <section>
+        <div class="row p-0 mx-auto">
+          {{#with subscribe}}
+            <div class="col-12 text-bg-dark">
+              <ul class="nav justify-content-between align-items-center">
+                <li class="nav-item">
+                  <ul class="nav flex-column">
+                    <div class="nav-item mt-2 ms-2">
+                      <h2>{{header}}</h2>
+                      
+                    </div>
+                    <div class="nav-item mt-2 ms-2">
+                      <p>{{description}}</p>
+                    </div>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <ul class="nav">
+                    {{#each buttons}}
+                      <li class="nav-item">
+                        <a href="{{link}}" class="btn btn-primary me-3">{{text}}</a>
+                      </li>
+                    {{/each}}
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          {{/with}}
+        </div>
+      </section>
+
+      <div>
+        <hr class='my-5' />
+      </div>
+
+    </main>
+  {{/with}}
+</div>

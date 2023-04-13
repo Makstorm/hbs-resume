@@ -1,0 +1,35 @@
+{{#with data}}
+    <div class='card mb-4 row p-2'>
+        <div
+        class='row p-0 mx-auto align-items-center'
+        >
+        <img
+            src='{{image}}'
+            alt=''
+            class='col-2 m-0 p-0'
+        />
+
+        <div class='col-4'>
+            <h2>{{name}}</h2>
+            <p>{{description}}</p>
+        </div>
+
+        <div class='col-2'>
+            {{#with price}}
+            <p class=''>{{title}}:</p>
+            <h2>{{value}}</h2>
+            {{/with}}
+        </div>
+
+        <div class='col-2'>
+            <p class=''>{{amount}}:</p>
+        </div>
+
+        <div class="col-2">
+            {{#each buttons}}
+            <button class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}} my-2">{{text}}</button>
+            {{/each}}
+        </div>
+        </div>
+    </div>
+{{/with}}
