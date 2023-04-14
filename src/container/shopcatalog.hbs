@@ -1,0 +1,162 @@
+<div>
+  {{#with main}}
+    <main class='row p-0 mx-auto gx-2'>
+      <section class='my-5'>
+        <nav>
+          <ol class='breadcrumb'>
+            {{#each breadcrumb}}
+              <li
+                class='breadcrumb-item active'
+                aria-current='page'
+              ><a href='{{url}}'>{{name}}</a></li>
+            {{/each}}
+          </ol>
+        </nav>
+      </section>
+
+      <section>
+        <h1>{{header}}</h1>
+      </section>
+
+      <section>
+        <div class='row mx-auto mt-4'>
+          {{#each sortBlock}}
+            <div class='col-3'>
+              <select class='form-select'>
+                <option selected>{{placeholder}}</option>
+                {{#each options}}
+                  <option
+                    value='{{value}}'
+                  >{{text}}</option>
+                {{/each}}
+
+              </select>
+            </div>
+          {{/each}}
+        </div>
+      </section>
+
+      <div class='mt-5'></div>
+
+      <section class='col-4'>
+        {{#with filterBlock}}
+          <div class='card p-3'>
+            <div>
+              {{#with sellers}}
+                <p>{{title}}</p>
+                {{#each list}}
+                  <div class='form-check'>
+                    <input
+                      class='form-check-input'
+                      type='checkbox'
+                      value='{{value}}'
+                    />
+                    <label class='form-check-label'>
+                      {{value}}
+                    </label>
+                  </div>
+                {{/each}}
+              {{/with}}
+            </div>
+
+            <div>
+              <hr class='my-3' />
+            </div>
+
+            <div>
+              {{#with brands}}
+                <p>{{title}}</p>
+
+                <input
+                  type='text'
+                  class='form-control mb-3'
+                  placeholder='{{input.placeholder}}'
+                />
+                {{#each options}}
+                  <div class='form-check'>
+                    <input
+                      class='form-check-input'
+                      type='checkbox'
+                      value='{{value}}'
+                    />
+                    <label class='form-check-label'>
+                      {{value}}
+                    </label>
+                  </div>
+                {{/each}}
+              {{/with}}
+            </div>
+
+            <div>
+              <hr class='my-3' />
+            </div>
+
+            <div>
+              {{#with price}}
+                <p>{{title}}</p>
+
+                {{#each range}}
+                  <input
+                    type='number'
+                    class='form-control mb-3'
+                    placeholder='{{this}}'
+                  />
+                {{/each}}
+
+                {{#with button}}
+                  <a
+                    href='{{link}}'
+                    class='btn btn-outline-secondary'
+                  >{{text}}</a>
+                {{/with}}
+
+              {{/with}}
+            </div>
+
+            <div>
+              <hr class='my-3' />
+            </div>
+
+            <div>
+              {{#each filterList}}
+                <p>{{title}}</p>
+                {{#each options}}
+                  <div class='form-check'>
+                    <input
+                      class='form-check-input'
+                      type='checkbox'
+                      value='{{value}}'
+                    />
+                    <label class='form-check-label'>
+                      {{value}}
+                    </label>
+                  </div>
+                {{/each}}
+                {{#if @last}}{{else}}<hr />{{/if}}
+              {{/each}}
+            </div>
+
+          </div>
+        {{/with}}
+      </section>
+
+      <section class='col-8'>
+
+        <div class='row mx-auto p-0'>
+          {{#each goodsList}}
+            {{> catalogItem data=this}}
+          {{/each}}
+        </div>
+
+      </section>
+
+      <section class="mt-5">
+        {{> shopaction data=service}}
+      </section>
+
+      <div class=''>
+        <hr class="mt-5 mb-2">
+      </div>
+    </main>
+  {{/with}}
+</div>
