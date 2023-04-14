@@ -1,0 +1,25 @@
+{{#with data}}
+    <div class="row p-0 mx-auto align-items-center {{#if @first}}{{else}}mt-3{{/if}}">
+        <div class="col-4">
+        <p>{{number}}</p>
+        <h6>{{status}}</h6>
+        </div>
+        <div class="col-2">
+        {{#with amount}}
+            <p>{{title}}</p>
+            <h6>{{value}}</h6>
+        {{/with}}
+        </div>
+        <div class="col-4">
+        {{#each images}}
+            <img width="60px" src="{{this}}" alt="">
+        {{/each}}
+        </div>
+        <div class="col-2">
+        {{#with button}}
+            <a href="{{link}}" class="btn {{#if isPrimary}}btn-primary{{/if }}">{{text}}</a>
+        {{/with}}
+        </div>
+        <hr class="m-0 p-0">
+    </div>
+{{/with}}
