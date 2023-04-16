@@ -40,7 +40,18 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    navigation: {
+      links: [
+        {
+          text: 'Resume project',
+          href: 'https://github.com/',
+        },
+      ],
+
+      Logo: 'Максим Горобець',
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
